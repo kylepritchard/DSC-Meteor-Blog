@@ -1,0 +1,22 @@
+<template name="admin_list_breadcrumbs">
+  <ol class="breadcrumb">
+    <li><i class="fa fa-tachometer fa-fw"></i><a href="/admin">Dashboard</a></li>
+    <li class="active"><i class="fa {{icon}} fa-fw"></i>{{pageTitle}}</li>
+  </ol>
+</template>
+
+<template name="admin_add_breadcrumbs">
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-tachometer fa-fw"></i>Dashboard</a></li>
+    <li><a href="/admin/{{path}}"><i class="fa {{icon}} fa-fw"></i>{{pageTitle}}</a></li>
+    <li class="active"><i class="fa fa-pencil fa-fw"></i>Add {{pageTitle}}</li>
+  </ol>
+</template>
+
+<template name="admin_edit_breadcrumbs">
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-tachometer fa-fw"></i>Dashboard</a></li>
+    <li><a href="/admin/{{path}}"><i class="fa {{icon}} fa-fw"></i>{{pageTitle}}</a></li>
+    <li class="active"><i class="fa fa-pencil fa-fw"></i>Edit {{title}}</li>
+  </ol>
+</template>

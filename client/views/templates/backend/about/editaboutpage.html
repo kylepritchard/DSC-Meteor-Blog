@@ -1,0 +1,37 @@
+<template name="admin_editaboutpage">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Edit {{title}}</h1>
+      <ol class="breadcrumb">
+        <li>
+          <a href="/admin"><i class="mdi-action-dashboard"></i> Dashboard</a>
+        </li>
+        <li>
+          <a href="/admin/clubnews"><i class="mdi-action-description"></i> About Pages</a>
+        </li>
+        <li class="active">
+          <i class="mdi-action-description"></i> Edit About Page
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Edit {{title}}</h3>
+        </div>
+        <div class="panel-body">
+          {{#autoForm collection="About" id="updatePost" type="update" doc=this}}
+          <fieldset>
+            {{> afQuickField name='title'}} {{> afQuickField name='content'}}
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Update Post</button>
+          {{/autoForm}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>

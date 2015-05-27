@@ -1,0 +1,178 @@
+<template name="master_payment_wizard">
+  <div class="card">
+    <div class="card-body">
+      <div id="wizard" class="form-wizard form-wizard-horizontal">
+        <form class="form-horizontal" role="form" novalidate="novalidate">
+          <div class="form-wizard-nav">
+            <div class="progress">
+              <div class="progress-bar progress-bar-primary"></div>
+            </div>
+            <ul class="nav nav-justified">
+              <li class="active">
+                <a href="#tab1" data-toggle="tab">
+                  <span class="step">1</span>
+                  <span class="title">Choose your courses</span>
+                </a>
+              </li>
+              <li>
+                <a href="#tab2" data-toggle="tab">
+                  <span class="step">2</span>
+                  <span class="title">Name & Address</span>
+                </a>
+              </li>
+              <li>
+                <a href="#tab3" data-toggle="tab">
+                  <span class="step">3</span>
+                  <span class="title">Additional Information</span>
+                </a>
+              </li>
+              <li id="formSummary">
+                <a href="#tab4" data-toggle="tab">
+                  <span class="step">4</span>
+                  <span class="title">Confirmation</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--end .form-wizard-nav -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+              <form>
+                <div class="form-group">
+                  <label>Choose a course</label>
+                  <select id="course" name="courses" class="form-control">
+                    {{#each this}}
+                      <option value="{{title}} starts {{eventDate startdate}}">{{title}} === {{eventDate startdate}} to {{eventDate enddate}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Number of places</label>
+                  <select id="number" name="number" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <!--end #tab1 -->
+            <div class="tab-pane" id="tab2">
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <form class="form">
+                    <div class="form-group">
+                      <input type="text" name="BillingFName" class="form-control">
+                      <label>Billing First Name</label>
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Surname</label>
+                      <input type="text" name="BillingSName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Address Line 1</label>
+                      <input type="text" name="BillingAddr1" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>illing Address Line 2</label>
+                      <input type="text" name="BillingAddr2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing City</label>
+                      <input type="text" name="BillingCity" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Post Code</label>
+                      <input type="text" name="BillingPCode" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Country</label>
+                      <select id="BillCountry" name="BillingCountry" class="form-control">
+                        <option value="GB">United Kingdom</option>
+                        <option value="IE">Ireland</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-6">
+                  <form class="form">
+                    <div class="form-group">
+                      <label>Billing First Name</label>
+                      <input type="text" name="BillingFName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Surname</label>
+                      <input type="text" name="BillingSName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Address Line 1</label>
+                      <input type="text" name="BillingAddr1" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>illing Address Line 2</label>
+                      <input type="text" name="BillingAddr2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing City</label>
+                      <input type="text" name="BillingCity" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Post Code</label>
+                      <input type="text" name="BillingPCode" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Billing Country</label>
+                      <select id="BillCountry" name="BillingCountry" class="form-control">
+                        <option value="GB">United Kingdom</option>
+                        <option value="IE">Ireland</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+
+            </div>
+            <!--end #tab2 -->
+            <div class="tab-pane" id="tab3">
+              <p>
+                Is there any additonal information you would like to share with us?
+              </p>
+              <form>
+                <div class="form-group">
+                  <label>Additional Information</label>
+                  <textarea name="AdditionalInfo" rows="8" cols="40" class="form-control"></textarea>
+                </div>
+              </form>
+            </div>
+            <!--end #tab3 -->
+            <div class="tab-pane" id="tab4">
+              {{formSummary}}
+              <span id="results">
+              </span>
+            </div>
+            <!--end #tab4 -->
+          </div>
+          <!--end .tab-content -->
+          {{!--
+          <ul class="pager wizard">
+            <li class="previous first"><a href="javascript:void(0);">First</a></li>
+            <li class="previous"><a href="javascript:void(0);">Previous</a></li>
+            <li class="next last"><a href="javascript:void(0);">Last</a></li>
+            <li class="next"><a href="javascript:void(0);">Next</a></li>
+          </ul> --}}
+        </form>
+      </div>
+      <!--end #rootwizard -->
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,60 @@
+<template name="admin_batteryrota">
+
+    <h2 class="text-accent title"><i class="fa {{icon}} fa-fw"></i>Battery Rota</h2>
+
+    <div class="card">
+        <div class="card-head style-default-light">
+            <header class="text-accent">{{pageTitle}}</header>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                        <td width="18%" class="thead">Date</td>
+                        <td width="18%" class="thead">Person 1</td>
+                        <td width="18%" class="thead">Person 2</td>
+                        <td width="18%" class="thead">Person 3</td>
+                        <td width="18%" class="thead">Person 4</td>
+                        <td width="10%" class="thead" style="text-align: center; padding-left:0">Delete</td>
+                </thead>
+              <tbody>
+                {{#each batteryRota}}
+                  <tr>
+                    <td width="20%" class="editable-cell">
+                      {{#autoForm id=makeUniqueID type="update" collection="BatteryRota" doc=this}}
+                        {{> afFieldInput name="date"}}
+                        <button type="submit" class="btn btn-icon-toggle btn-accent" id="update_date"><i class="fa fa-check"></i></button>
+                      {{/autoForm}}
+                    </td>
+                    <td width="20%" class="editable-cell">
+                      {{#autoForm id=makeUniqueID type="update" collection="BatteryRota" doc=this autosave=true}}
+                        {{> afFieldInput name="person1"}}
+                      {{/autoForm}}
+                    </td>
+                    <td width="20%" class="editable-cell">
+                        {{#autoForm id=makeUniqueID type="update" collection="BatteryRota" doc=this autosave=true}}
+                          {{> afFieldInput name="person2"}}
+                        {{/autoForm}}
+                    </td>
+                    <td width="20%" class="editable-cell">
+                        {{#autoForm id=makeUniqueID type="update" collection="BatteryRota" doc=this autosave=true}}
+                          {{> afFieldInput name="person3"}}
+                        {{/autoForm}}
+                    </td>
+                    <td width="20%" class="editable-cell">
+                        {{#autoForm id=makeUniqueID type="update" collection="BatteryRota" doc=this autosave=true}}
+                          {{> afFieldInput name="person4"}}
+                        {{/autoForm}}
+                    </td>
+                    <td width="10%">
+                        <button type="submit" class="btn btn-icon-toggle btn-accent" id="delete"><i class="fa fa-trash-o"></i></button>
+                    </td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary" id="add_date">Add new date</button>
+        </div>
+    </div>
+
+
+</template>

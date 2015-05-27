@@ -1,0 +1,134 @@
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 5.33333px;
+    width: 20px;
+    height: 20px;
+    -webkit-transition: all 0.15s ease-out 0;
+    -moz-transition: all 0.15s ease-out 0;
+    transition: all 0.15s ease-out 0;
+    background: transparent;
+    border: 1px solid @brand-accent;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    position: relative !important;
+    margin-right: 10px !important;
+    z-index: 1000;
+
+    &:hover {
+        background: @white;
+    }
+
+    &:checked {
+        background: @brand-accent;
+
+        &::before {
+            width: 19px;
+            height: 20px;
+            position: absolute;
+            content: '\2716';
+            display: inline-block;
+            font-size: 14px;
+            text-align: center;
+            line-height: 17px;
+        }
+
+        &::after {
+            -webkit-animation: click-wave 0.65s;
+            -moz-animation: click-wave 0.65s;
+            animation: click-wave 0.65s;
+            background: @brand-accent;
+            content: '';
+            display: block;
+            position: relative;
+            z-index: 100;
+        }
+    }
+
+    &.radio {
+        border-radius: 50%;
+
+        &::after {
+            border-radius: 50%;
+        }
+    }
+}
+
+
+//Override bootstrap
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+@-webkit-keyframes
+click-wave { 0% {
+ width: 20px;
+ height: 20px;
+ opacity: 0.35;
+ position: relative;
+}
+ 100% {
+ width: 100px;
+ height: 100px;
+ margin-left: -40px;
+ margin-top: -40px;
+ opacity: 0.0;
+}
+}
+
+@-moz-keyframes
+click-wave { 0% {
+ width: 20px;
+ height: 20px;
+ opacity: 0.35;
+ position: relative;
+}
+ 100% {
+ width: 100px;
+ height: 100px;
+ margin-left: -40px;
+ margin-top: -40px;
+ opacity: 0.0;
+}
+}
+
+@-o-keyframes
+click-wave { 0% {
+ width: 20px;
+ height: 20px;
+ opacity: 0.35;
+ position: relative;
+}
+ 100% {
+ width: 100px;
+ height: 100px;
+ margin-left: -40px;
+ margin-top: -40px;
+ opacity: 0.0;
+}
+}
+
+@keyframes
+click-wave { 0% {
+ width: 20px;
+ height: 20px;
+ opacity: 0.35;
+ position: relative;
+}
+ 100% {
+ width: 100px;
+ height: 100px;
+ margin-left: -40px;
+ margin-top: -40px;
+ opacity: 0.0;
+}
+}

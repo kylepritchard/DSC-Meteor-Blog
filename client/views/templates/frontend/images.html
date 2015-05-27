@@ -1,0 +1,12 @@
+<template name="imageView">
+  <div class="imageView">
+    {{#each images}}
+    <div>
+      <a href="{{this.url}}" target="_blank">
+        <img src="{{url store='thumbs'}}" />
+      </a>
+      Delete {{this.name}}: {{> FS.DeleteButton class="btn btn-danger btn-xs"}}
+    </div>
+    {{/each}}
+  </div>
+</template>

@@ -1,0 +1,134 @@
+/* Additional styling */
+@import 'responsive.import.less';
+@import 'wizard.import.less';
+@import 'toastr.import.less';
+@import 'redactor.import.less';
+@import 'side-menu.import.less';
+@import 'radio.import.less';
+@import 'batteryrota.import.less';
+@import 'recurring-modal.import.less';
+@import 'tables.import.less';
+@import 'frontend-navbar.import.less';
+@import 'carousel.import.less';
+@import 'sections.import.less';
+@import 'homepage.import.less';
+
+//Font weight
+body {
+  font-weight: @weight-normal;
+  height: 2000px;
+}
+// Admin page titles
+h2.title {
+  margin-bottom: 20px;
+  //font-weight: @weight-light;
+  i {
+    margin-right: 10px;
+    color: @gray-light;
+  }
+}
+// Add post button
+div.tools > a {
+  vertical-align: middle;
+}
+//Homepage
+div#base {
+  padding-left: 0;
+}
+/* Homepage */
+#header {
+  top: 0;
+}
+section#homepage-header {
+  background: red;
+  background-image: url("images/cuttlebug-hero.jpg");
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat !important;
+  /* background-attachment: fixed !important; */
+  height: 400px;
+  margin-top: 64px;
+  .box-shadow(@z-height-1);
+}
+/* Navbar */
+div.headerbar-right {
+  .header-nav {
+    .dropdown {
+      position: inherit;
+      padding: 14px 0 14px 14px;
+      &.open {
+        a {
+          background-color: none;
+          &:hover,
+          &:focus {
+            background: none;
+          }
+        }
+        ul.dropdown-menu {
+          display: block;
+          width: 100%;
+          top: 64px;
+          position: absolute;
+          z-index: 900;
+          background: rgba(0, 0, 0, 0.75);
+          border: none;
+          border-radius: 0;
+          padding: 20px;
+          &.animation-fadein {
+            .animation(fadeIn, 1s, cubic-bezier(0.22, 0.61, 0.36, 1));
+          }
+          .dropdown-header {
+            height: 100%;
+            float: left;
+            width: 300px;
+            padding: 0;
+            opacity: 1;
+            color: @white;
+            h2 {
+              margin: 0;
+            }
+          }
+          li.dropdown-page {
+            position: relative;
+            display: inline-block;
+            float: left;
+            min-height: 100px;
+            button {
+              height: 100px;
+              margin: 0 10px;
+              i {
+                display: block;
+                width: 100%;
+                color: @white;
+                text-align: center;
+                font-size: 26px;
+              }
+            }
+          }
+        }
+      }
+      a {
+        line-height: 36px;
+        &:hover {
+          background: none;
+        }
+      }
+      ul.dropdown-menu {
+        width: 100%;
+        background: black;
+        display: none;
+        .dropdown-header {
+
+        }
+        .dropdown-header {
+
+        }
+        li {
+          a {
+
+          }
+        }
+      }
+    }
+  }
+}

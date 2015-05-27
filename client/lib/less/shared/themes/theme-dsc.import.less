@@ -1,0 +1,102 @@
+//
+// Theme Variables
+// --------------------------------------------------
+// Brand colors
+// -------------------------
+@brand-inverse: #474747;
+@brand-primary: #0aa89e;
+@brand-accent: #ec407a;
+@brand-success: #4caf50;
+@brand-warning: #ff9800;
+@brand-danger: #f44336;
+@brand-info: #2196f3;
+
+// Headerbar inverse
+// -------------------------
+@headerbar-inverse-bg: lighten(@brand-inverse, 2%);
+@headerbar-inverse-color: fade(@white, 60%);
+@headerbar-inverse-link-hover: fade(@white, 15%);
+
+// Body
+// -------------------------
+@body-background: #f9f9f9;
+@body-background-size: 100% 100%;
+@body-color: @text-color;
+
+// Menubar
+// -------------------------
+@menubar-bg: @gray-lightest;
+@menubar-color: fade(@black, 85%);
+@menubar-folder-color: fade(@menubar-color, 75%);
+@menubar-font-size: 14px;
+@menubar-gap: 0;
+@menubar-top-margin: 0;
+@menubar-link-hover: fade(@black, 7%);
+@menubar-link-hover-color: @black;
+@menubar-link-active: @white;
+@menubar-link-active-color: @brand-primary;
+@menubar-icon-width: 40px;
+@menubar-icon-bg: @white;
+@menubar-icon-bg-active: @white;
+@menubar-icon-bg-hover: fade(@black, 7%);
+@menubar-icon-color: @gray;
+@menubar-icon-color-active: @brand-primary;
+@menubar-icon-color-hover: @text-color;
+@menubar-icon-border: @menubar-icon-bg;
+@menubar-width: 240px;
+@menubar-width-collapsed: @menubar-icon-width + (@menubar-gap * 2);
+@menubar-collapse-speed: 0.5s;
+@menubar-collapse-ease: cubic-bezier(.15,.99,.18,1.01);
+//ease-out;
+// Menubar tree variables
+@menubar-tree-border-color: transparent;
+@menubar-tree-width: 21px;
+@menubar-tree-indent: 18px;
+@menubar-tree-indent-level1: 26px;
+@menubar-tree-indent-level2: @menubar-tree-indent-level1 + @menubar-tree-width;
+@menubar-tree-indent-level3: @menubar-tree-indent-level2 + @menubar-tree-width;
+@menubar-tree-indent-level4: @menubar-tree-indent-level3 + @menubar-tree-width;
+@menubar-tree-indent-level5: @menubar-tree-indent-level4 + @menubar-tree-width;
+
+//pink
+// Breadcrumbs
+// -------------------------
+@breadcrumb-bg: transparent;
+@breadcrumb-color: #ec407a;
+@breadcrumb-active-color: @text-color;
+@breadcrumb-size: 16px;
+@breadcrumb-active-size: 16px;
+// Forms
+// -------------------------
+@input-color: @black;
+@input-border: fade(@black, 12);
+@input-border-focus: @brand-accent;
+@input-border-disabled: fade(@black, 20);
+@input-color-placeholder: @gray-light;
+@form-label-focus: @text-color;
+@form-label-opacity: 0.5;
+@form-label-focus-opacity: 1;
+@input-border-success-focus: @brand-success;
+@input-border-warning-focus: @brand-warning;
+@input-border-danger-focus: @brand-danger;
+@inverse-input-color: @gray-lightest;
+@inverse-input-border: fade(@white, 25);
+@inverse-input-border-focus: hsv(hue(@brand-primary), 30%, 93%);
+@inverse-input-border-disabled: fade(@white, 40%);
+@inverse-input-color-placeholder: fade(@white, 50%);
+@inverse-form-label-focus: hsv(hue(@brand-primary), 30%, 93%);
+@inverse-input-border-success-focus: hsv(hue(@brand-success), 70%, 90%);
+@inverse-input-border-warning-focus: hsv(hue(@brand-warning), 80%, 90%);
+@inverse-input-border-danger-focus: hsv(hue(@brand-danger), 70%, 90%);
+
+
+// Fonts
+// -------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@font-family-sans-serif:		"Montserrat", "Roboto",sans-serif, Helvetica, Arial, sans-serif;
+
+h1, h2, h3, h4, h5 {
+  font-family: "Varela Round", "Roboto", sans-serif, Helvetica, Arial, sans-serif;
+}

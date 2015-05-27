@@ -1,0 +1,11 @@
+<template name="admin_layout">
+{{> yield "admin_navheader"}}
+  <div id="base">
+    <div id="content">
+      <section>
+        {{> yield}}
+      </section>
+    </div>
+    {{> yield "admin_navsidebar"}}
+  </div>
+</template>

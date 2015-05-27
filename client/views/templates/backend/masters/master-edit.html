@@ -1,0 +1,13 @@
+<template name="admin_edit">
+  <h2 class="title text-accent"><i class="fa fa-pencil fa-fw"></i>Edit {{title}}</h2>
+
+  <div class="card">
+    <div class="card-head style-default-light">
+      <header class="text-accent">Edit {{title}}</header>
+    </div>
+    <div class="card-body">
+      {{> quickForm collection=collection id=formUpdateId type="update" resetOnSuccess="true" doc=this fields=formFields buttonContent="Update"}}
+    </div>
+  </div>
+
+</template>

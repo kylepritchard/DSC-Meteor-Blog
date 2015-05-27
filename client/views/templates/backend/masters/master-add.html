@@ -1,0 +1,14 @@
+<template name="admin_add">
+
+  <h2 class="title text-accent"><i class="fa {{icon}} fa-fw"></i>Add {{pageTitle}} {{addText}}</h2>
+
+  <div class="card">
+    <div class="card-head style-default-light">
+      <header class="text-accent">Add {{pageTitle}} {{addText}}</header>
+    </div>
+    <div class="card-body">
+      {{> quickForm collection=collection id=formInsertId type="insert" resetOnSuccess="true" fields=formFields validation="submit"}}
+    </div>
+  </div>
+
+</template>

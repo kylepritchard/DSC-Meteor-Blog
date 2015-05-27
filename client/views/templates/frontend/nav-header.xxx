@@ -1,0 +1,84 @@
+<template name="nav_header">
+<div class="headerbar">
+    <div class="headerbar-left">
+		<ul class="header-nav header-nav-options">
+			<li class="header-nav-brand">
+				<div class="brand-holder">
+					<a href="/">
+						<span class="text-lg text-bold text-primary">DONAGHADEE SAILING CLUB</span>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+    <div class="headerbar-right">
+        <ul class="header-nav header-nav-options">
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Sailing</a>
+                <ul class="dropdown-menu animation-fadein">
+                    <div class="dropdown-header">
+                        <h2>Sailing Section</h2>
+                        </div>
+                    {{#each sailingLinks}}
+					<li class="dropdown-page">
+						<button href="#" class='btn'>
+                            <i class="fa fa-newspaper-o"></i>
+							{{title}}
+						</button>
+					</li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Training</a>
+                <ul class="dropdown-menu animation-fadein">
+                    <li class="row dropdown-header">Training Section</li>
+                    {{#each trainingLinks}}
+					<li class="dropdown-page">
+						<button href="#" class='btn'>
+                            <i class="fa fa-newspaper-o"></i>
+							{{title}}
+						</button>
+					</li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Social</a>
+                <ul class="dropdown-menu animation-fadein">
+                    <li class="row dropdown-header">Social Section</li>
+                    {{#each trainingLinks}}
+					<li class="dropdown-page">
+						<button href="#" class='btn'>
+                            <i class="fa fa-newspaper-o"></i>
+							{{title}}
+						</button>
+					</li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown">About Us</a>
+                <ul class="dropdown-menu animation-fadein">
+                    <li class="row dropdown-header">About Us</li>
+                    {{#each trainingLinks}}
+					<li class="dropdown-page">
+						<button href="#" class='btn'>
+                            <i class="fa fa-newspaper-o"></i>
+							{{title}}
+						</button>
+					</li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+        <ul class="header-nav header-nav-toggle">
+			<li class="dropdown">
+				<a class="btn btn-icon-toggle btn-default" href="#" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+                <ul class="dropdown-menu animation-fadein">
+                </ul>
+			</li>
+		</ul>
+    </div>
+</div>
+</template>

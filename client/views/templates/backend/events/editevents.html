@@ -1,0 +1,20 @@
+<template name="admin_edit_event">
+
+    <h1>Edit Event Form</h1>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#recurringDates" data-keyboard="false" data-backdrop="static">
+        Recurring dates
+    </button>
+
+    <div class="card">
+        <div class="card-head style-default-light">
+            <header class="text-accent">Edit {{addText}}</header>
+        </div>
+        <div class="card-body">
+            {{> quickForm collection=collection id=formInsertId type="update" doc=this fields=formFields validation="submit"}}
+        </div>
+    </div>
+
+    {{> recurring_modal}}
+</template>

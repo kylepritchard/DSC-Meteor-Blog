@@ -1,0 +1,56 @@
+<template name="admin_list">
+
+    <h2 class="text-accent title"><i class="fa {{icon}} fa-fw"></i>{{pageTitle}}</h2>
+
+    <div class="card">
+        <div class="card-head style-default-light">
+            <header class="text-accent">{{pageTitle}}</header>
+            <div class="tools">
+                <div class="btn-group">
+                    <a href="/admin/{{path}}/{{addPath}}" class="btn btn-info btn-raised pull-right ink-reaction">Add new {{addText}}</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th width="40%">Title</th>
+                            <th width="20%">Posted/Updated</th>
+                            <th width="20%">Author</th>
+                            <th colspan="2" width="10%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {{#each this}}
+                        <tr>
+                            <td>
+                                <a href="/admin/{{path}}/{{_id}}" class="text-lg text-accent ">{{title}}</a>
+                            </td>
+                            <td>{{formatDate postdate}}</td>
+                            <td>{{author}}</td>
+                            <td>
+                                <a href="/admin/{{path}}/{{_id}}" class="btn btn-info btn-raised btn-xs ink-reaction">Edit {{addText}}</a>
+                            </td>
+                            <td>
+                                <button id="delete" class="btn btn-danger btn-raised btn-xs ink-reaction">Delete {{addText}}</button>
+                            </td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                            <td colspan="5 ">
+                                No {{addText}}s made
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+</template>

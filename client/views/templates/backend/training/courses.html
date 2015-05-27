@@ -1,0 +1,66 @@
+<template name="admin_courses">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header text-primary">Courses</h1>
+      <ol class="breadcrumb">
+        <li>
+          <a href="/admin"><i class="mdi-action-dashboard"></i> Dashboard</a>
+        </li>
+        <li class="active">
+          <i class="mdi-action-description"></i> Courses
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+          <h2 class="panel-title pull-left text-primary">Courses</h2>
+          <a href="/admin/training/addcourse" class="btn btn-primary pull-right">Add new course</a>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Posted on</th>
+                  <th>Author</th>
+                  <th class="col-md-1"></th>
+                  <th class="col-md-1"></th>
+                </tr>
+              </thead>
+              <tbody>
+
+                {{#each this}}
+                <tr>
+                  <td>
+                    <a href="/admin/training/courses/{{_id}}">{{title}}</a>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td class="col-md-1">
+                    <a href="/admin/training/courses/{{_id}}" class="btn btn-primary btn-xs">Edit Course</a>
+                  </td>
+                  <td class="col-md-1">
+                    <button id="delete" class="btn btn-danger btn-xs">Delete Course</button>
+                  </td>
+                </tr>
+                {{else}}
+                <tr>
+                  <td colspan="5">
+                    No courses made
+                  </td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+</template>

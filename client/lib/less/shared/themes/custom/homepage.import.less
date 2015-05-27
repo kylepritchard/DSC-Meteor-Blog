@@ -1,0 +1,30 @@
+.news-item {
+
+  background: @white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  &.news-featured {
+    img {
+      width: 100%;
+    }
+    @media (max-width: @screen-md-min) {
+      margin-bottom: 15px;
+    }
+  }
+
+  img {
+    width: 35%;
+    border-radius: 5px;
+  }
+
+  .right {
+    padding-left: 36%;
+
+    h4 {
+      margin:0;
+    }
+  }
+
+}

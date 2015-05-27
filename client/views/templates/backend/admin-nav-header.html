@@ -1,0 +1,23 @@
+<template name="admin_navheader">
+  <header id="header">
+    <div class="headerbar">
+      <div class="headerbar-left">
+        <div id="menu-expand">
+            <button class="btn btn-icon-toggle btn-default menubar-toggle"><i class="fa fa-bars"></i></button>
+        </div>
+        {{> yield "breadcrumbs"}}
+      </div>
+      <div class="headerbar-right">
+        <ul class="header-nav header-nav-options">
+          ~ Right aligned navigation items ~
+        </ul>
+        <ul class="header-nav header-nav-profile">
+          ~ Right aligned profile dropdown menu ~
+        </ul>
+        <ul class="header-nav header-nav-toggle">
+          ~ Right aligned toggle items ~
+        </ul>
+      </div>
+    </div>
+  </header>
+</template>

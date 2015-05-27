@@ -1,0 +1,70 @@
+<template name="admin_add_event">
+
+    <h1>Add Event Form</h1>
+
+    <div class="card">
+        <div class="card-head style-default-light">
+            <header class="text-accent">Add {{pageTitle}} {{addText}}</header>
+        </div>
+        <div class="card-body">
+          {{#autoForm id=formInsertId type="insert" resetOnSuccess="true" collection=collection validation="submit"}}
+
+            {{> afFormGroup name="title"}}
+
+            {{!-- Start/End Time --}}
+            <div class="card">
+              <div class="card-head style-default-light">
+                  <header class="text-accent">Choose Schedule</header>
+              </div>
+              <div class="card-body">
+                <div class="col-xs-12">
+                  <div class="col-xs-6">{{> afFormGroup name="startDate"}}</div>
+                  <div class="col-xs-6">{{> afFormGroup name="startTime"}}</div>
+                </div>
+                <div class="col-xs-12">
+                  <div class="col-xs-6">{{> afFormGroup name="endDate"}}</div>
+                  <div class="col-xs-6">{{> afFormGroup name="endTime"}}</div>
+                </div>
+              </div>
+            </div>
+
+            {{!-- Recurrence --}}
+            <div class="card">
+              <div class="card-head style-default-light">
+                  <header class="text-accent">Recurring Event</header>
+              </div>
+              <div class="card-body">
+                <div class="col-xs-12">
+                  <div class="col-xs-6">
+                    {{> afFormGroup name="recurSelect" noselect=true}}
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  {{#if afFieldValueIs name="recurSelect" value=true}}
+                  <div class="col-xs-6">
+                    <button type="button" class="btn btn-accent btn-lg" data-toggle="modal" data-target="#recurringDates" data-keyboard="false" data-backdrop="static">
+                        Recurring dates
+                    </button>
+                  </div>
+                  <div class="col-xs-6 recurrence">
+                  </div>
+                  {{else}}
+                  <div class="col-xs-6">
+                  </div>
+                  <div class="col-xs-6 recurrence">
+                  </div>
+                  {{/if}}
+                  {{> afFormGroup name="recurString"}}
+                </div>
+              </div>
+            </div>
+
+          <button type="Submit">Add Event</button>
+
+          {{/autoForm}}
+            <!-- {{> quickForm collection=collection id=formInsertId type="insert" resetOnSuccess="true" fields=formFields validation="submit"}} -->
+        </div>
+    </div>
+
+    {{> recurring_modal}}
+</template>

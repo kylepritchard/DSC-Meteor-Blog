@@ -1,0 +1,64 @@
+<template name="event_list">
+
+    <h2 class="text-accent title"><i class="fa {{icon}} fa-fw"></i>{{pageTitle}}</h2>
+
+    <div class="card">
+        <div class="card-head style-default-light">
+            <header class="text-accent">{{pageTitle}}</header>
+            <div class="tools">
+                <div class="btn-group">
+                    <a href="/admin/{{path}}/{{addPath}}" class="btn btn-info btn-raised pull-right ink-reaction">Add new {{addText}}</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th width="40%">Title</th>
+                            <th width="20%">Start Date</th>
+                            <th width="20%">End date</th>
+                            <th width="10%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {{#each this}}
+                        <tr>
+                            <td>
+                                {{#if recurSelect}}
+                                    <i class="fa fa-refresh fa-spin"></i>
+                                {{/if}}
+                                {{#if parent}}
+                                    <i class="fa fa-refresh fa-spin"></i>
+                                {{/if}}
+                                <a href="/admin/{{path}}/{{_id}}" class="text-lg text-accent ">{{title}}</a>
+                            </td>
+                            <td>{{eventDate startDate}}</td>
+                            <td>{{eventDate endDate}}</td>
+                            <!--                             <td>
+    <a href="/admin/{{path}}/{{_id}}" class="btn btn-info btn-raised btn-xs ink-reaction">Edit {{addText}}</a>
+</td> -->
+                            <td class="btn-group">
+                                <!-- <button id="delete" class="btn btn-danger btn-raised btn-xs ink-reaction">Delete {{addText}}</button> -->
+                                <button class="btn btn-icon-toggle btn-accent" href="/admin/{{path}}/{{_id}}"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-icon-toggle btn-accent" id="delete"><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                            <td colspan="4">
+                                No {{addText}}s made
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+</template>

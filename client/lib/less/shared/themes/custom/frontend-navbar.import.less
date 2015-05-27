@@ -1,0 +1,90 @@
+.navbar-default {
+  min-height: 100px;
+  background-color: transparent;
+  border: none;
+  padding: 0 30px;
+
+
+  .container-fluid {
+    .navbar-header {
+      height: 64px;
+      .navbar-brand {
+        height: 64px;
+        line-height: 38px;
+      }
+      .navbar-toggle {
+        border-color: @brand-accent;
+      }
+    }
+    .navbar-collapse {
+      ul.navbar-nav {
+        li {
+          a {
+            line-height: 38px;
+            letter-spacing: .12em;
+            font-size: 16px;
+            color: @white;
+            font-weight: 500;
+
+            &:hover {
+              color: @gray;
+            }
+          }
+          &.dropdown {
+
+            &.teal {
+              ul {
+                background-color: rgba(57, 172, 200, 0.98);
+              }
+            }
+
+            &.blue {
+              ul {
+                background-color: rgba(32, 106, 170, 0.98);
+              }
+            }
+
+          }
+          &.dropdown.open {
+            a:focus {
+              background-color: transparent;
+              color: @gray;
+            }
+            ul {
+              // background-color: rgba(0, 0, 0, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Style for when carousel
+  &.beyond-carousel {
+    background-color: #fff;
+    transition: background-color, 0.5s;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+
+    .container-fluid {
+      .navbar-collapse {
+        ul.navbar-nav {
+          li {
+            a {
+              color: @gray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+@media (max-width: 768px) {
+  ul.navbar-nav {
+    li.dropdown.open {
+      ul {
+        background-color: #fff !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+var fs = Npm.require("fs");
+var os = Npm.require("os");
+var path = Npm.require("path");
+
+UploadController = RouteController.extend({
+    onBeforeAction: function(req, res, next) {
+        console.log('running');
+        var files = []; // Store files in an array and then pass them to request.
+
+        var image = {}; // crate an image object
+
+        if (req.method === "POST") {
+            var busboy = new Busboy({
+                headers: req.headers
+            });
+            busboy.on("file", function(fieldname, file, filename, encoding, mimetype) {
+                var timestamp = moment().format('X');
+                // var saveTo = path.join('../../../../../public/uploads/', timestamp + '_' + filename);
+                var saveTo = path.join('../../../../../public/uploads/', timestamp + '-' + filename);
+                console.log(saveTo);
+                file.pipe(fs.createWriteStream(saveTo));
+                files.push(saveTo);
+
+                image.mimeType = mimetype;
+                image.encoding = encoding;
+
+                // // buffer the read chunks
+                // var buffers = [];
+                //
+                // file.on('data', function(data) {
+                //     buffers.push(data);
+                // });
+                // file.on('end', function() {
+                //     // concat the chunks
+                //     image.data = Buffer.concat(buffers);
+                //     // push the image object to the file array
+                //     files.push(image);
+                // });
+            });
+
+            // busboy.on("field", function(fieldname, value) {
+            //     req.body[fieldname] = value;
+            // });
+
+            busboy.on("finish", function() {
+                // Pass the file array together with the request
+                req.files = files;
+                next();
+            });
+            // Pass request to busboy
+            req.pipe(busboy);
+        } else {
+            this.next();
+        }
+    }
+});
+
+Router.route('/upload_img', {
+    name: 'upload_image',
+    controller: 'UploadController',
+    action: function() {
+        // we assume only one image here
+        var image = this.request.files[0];
+        console.log(image);
+
+        var id = Images.insert(image);
+        var res = {
+            link: '/image/' + id
+        };
+        this.response.end(JSON.stringify(res));
+
+    },
+    where: 'server'
+});

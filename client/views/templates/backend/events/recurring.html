@@ -1,0 +1,331 @@
+<template name="recurring_modal">
+
+    <!-- Modal -->
+    <div class="modal fade" id="recurringDates" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-tabs tabs-center">
+                        <li class="active"><a href="#daily" data-toggle="tab">Daily</a></li>
+                        <li><a href="#weekly" data-toggle="tab">Weekly</a></li>
+                        <li><a href="#monthly" data-toggle="tab">Monthly</a></li>
+                    </ul>
+                </div>
+                <div class="modal-body tab-content">
+                    <div class="tab-pane active" id="daily">
+
+                        <div id="slider-daily"></div>
+                        <span id="slider-daily-value"></span>
+
+                    </div>
+
+                    <div class="tab-pane" id="weekly">
+                        <div id="numberWks">
+                            <div id="slider-weekly"></div>
+                            <span id="slider-weekly-value"></span>
+                        </div>
+
+                        <!-- Check -->
+                        <div id="dayOfWk-weekly">
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="0" name="dayOfWk" checked>
+                                    <span>Monday</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="1" name="dayOfWk">
+                                    <span>Tueday</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="2" name="dayOfWk" checked>
+                                    <span>Wednesday</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="3" name="dayOfWk">
+                                    <span>Thursday</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="4" name="dayOfWk">
+                                    <span>Friday</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="5" name="dayOfWk">
+                                    <span>Saturday</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" value="6" name="dayOfWk">
+                                    <span>Sunday</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="monthly">
+
+                        <div id="numberMths">
+                            <div id="slider-monthly"></div>
+                            <span id="slider-monthly-value"></span>
+                        </div>
+
+                        <!-- Radios -->
+                        <div id="dayOrWk" class="radio-group">
+                            <label class="radio fix-indent">
+                                <input type="radio" class="option-input radio" name="dayOrWk" id="dayOfMth-radio"> On Day of the month
+                            </label>
+                            <label class="radio fix-indent">
+                                <input type="radio" class="option-input radio" name="dayOrWk" id="dayOfWk-radio"> On day of the week
+                            </label>
+                        </div>
+
+                        <div id="dayOfMth">
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth1" value="1" name="dayOfMth">
+                                    <span>1</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth2" value="2" name="dayOfMth">
+                                    <span>2</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth3" value="3" name="dayOfMth">
+                                    <span>3</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth4" value="4" name="dayOfMth">
+                                    <span>4</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth5" value="5" name="dayOfMth">
+                                    <span>5</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth6" value="6" name="dayOfMth">
+                                    <span>6</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth7" value="7" name="dayOfMth">
+                                    <span>7</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth8" value="8" name="dayOfMth">
+                                    <span>8</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth9" value="9" name="dayOfMth">
+                                    <span>9</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth10" value="10" name="dayOfMth">
+                                    <span>10</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth11" value="11" name="dayOfMth">
+                                    <span>11</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth12" value="12" name="dayOfMth">
+                                    <span>12</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth13" value="13" name="dayOfMth">
+                                    <span>13</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth14" value="14" name="dayOfMth">
+                                    <span>14</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth15" value="15" name="dayOfMth">
+                                    <span>15</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth16" value="16" name="dayOfMth">
+                                    <span>16</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth17" value="17" name="dayOfMth">
+                                    <span>17</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth18" value="18" name="dayOfMth">
+                                    <span>18</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth19" value="19" name="dayOfMth">
+                                    <span>19</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth20" value="20" name="dayOfMth">
+                                    <span>20</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth21" value="21" name="dayOfMth">
+                                    <span>21</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth22" value="22" name="dayOfMth">
+                                    <span>22</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth23" value="23" name="dayOfMth">
+                                    <span>23</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth24" value="24" name="dayOfMth">
+                                    <span>24</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth25" value="25" name="dayOfMth">
+                                    <span>25</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth26" value="26" name="dayOfMth">
+                                    <span>26</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth27" value="27" name="dayOfMth">
+                                    <span>27</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth28" value="28" name="dayOfMth">
+                                    <span>28</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth29" value="29" name="dayOfMth">
+                                    <span>29</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth30" value="30" name="dayOfMth">
+                                    <span>30</span>
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-styled">
+                                <label>
+                                    <input type="checkbox" id="dayMth31" value="31" name="dayOfMth">
+                                    <span>31</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="dayOfWk">
+                            <select name="numOfWk" id="numOfWk">
+                                <option value="1">
+                                    1st </option>
+                                <option value="2">
+                                    2nd </option>
+                                <option value="3">
+                                    3rd </option>
+                                <option value="4">
+                                    4th </option>
+                                <option value="5">
+                                    5th </option>
+                                <option value="0">
+                                    last </option>
+                            </select>
+                            <select name="dayOfWk-monthly" id="dayOfWk">
+                                <option value="MO">
+                                    Mon </option>
+                                <option value="TU">
+                                    Tuesday </option>
+                                <option value="WE">
+                                    Wednesday </option>
+                                <option value="TH">
+                                    Thursday </option>
+                                <option value="FR">
+                                    Friday </option>
+                                <option value="SA">
+                                    Saturday </option>
+                                <option value="SU">
+                                    Sunday </option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <div class="end" id="end">
+                        <input type="text" id="end-date">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" id="generate" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</template>

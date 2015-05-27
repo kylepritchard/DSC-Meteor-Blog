@@ -1,0 +1,62 @@
+<template name="admin_navsidebar">
+
+  <div id="menubar" class="menubar-inverse">
+
+    <div class="menubar-fixed-panel">
+      {{!-- <div class="brand-holder">
+        <span class="text-lg">Donaghadee Sailing Club</span>
+      </div> --}}
+    </div>
+    <div class="user-logged-in">
+        <div class="content">
+            <div class="user-name">{{username}} <span class="text-muted f9">admin</span></div>
+            <div class="user-email">last@samurai.jp</div>
+            <div class="user-actions">
+                <a class="m-r-5" href="/admin">settings</a> <a href="#">logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="expand-menu">
+        <a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="#">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id='sidemenu'>
+        <ul>
+           <li><a href='/admin'><i class="fa fa-tachometer fa-fw"></i> Dashboard</a></li>
+           <li class='has-sub'><a href='#'><i class="fa fa-newspaper-o fa-fw"></i> Club News</a>
+              <ul>
+                 <li><a href='/admin/clubnews'><i class="fa fa-newspaper-o fa-fw"></i> Club New Articles</a></li>
+              </ul>
+           </li>
+           <li class='has-sub'><a href='#'><i class="fa fa-ship fa-fw"></i> Sailing Section</a>
+              <ul>
+                 <li><a href='/admin/sailing'><i class="fa fa-ship fa-fw"></i> Sailing Pages</a></li>
+                 <li><a href='/admin/sailing/batteryrota'><i class="fa fa-users fa-fw"></i> Battery Rota</a></li>
+              </ul>
+           </li>
+           <li class='has-sub'><a href='#'><i class="fa fa-university fa-fw"></i> Training Section</a>
+              <ul>
+                 <li><a href='/admin/training'><i class="fa fa-university fa-fw"></i> Training Pages</a></li>
+                 <li><a href='/admin/training/courses'><i class="fa fa-university fa-fw"></i> Training Courses</a></li>
+                 <li><a href='/admin/training/coursetypes'><i class="fa fa-university fa-fw"></i> Course Types</a></li>
+              </ul>
+           </li>
+           <li class='has-sub'><a href='#'><i class="fa fa-info-circle fa-fw"></i> About Section</a>
+              <ul>
+                 <li><a href='/admin/about'><i class="fa fa-info-circle fa-fw"></i> About Pages</a></li>
+              </ul>
+           </li>
+           <li class='has-sub'><a href='#'><i class="fa fa-users fa-fw"></i> Social Section</a>
+              <ul>
+                 <li><a href='/admin/social'><i class="fa fa-users fa-fw"></i> Social Pages</a></li>
+              </ul>
+           </li>
+           <li><a href='/admin/events'><i class="fa fa-ship fa-fw"></i> Events</a></li>
+           <li><a href='#'><i class="fa fa-ship fa-fw"></i> Contact</a></li>
+           <li><a href='/admin/modal'><i class="fa fa-ship fa-fw"></i> Recurring</a></li>
+        </ul>
+    </div>
+  </div>
+
+</template>
