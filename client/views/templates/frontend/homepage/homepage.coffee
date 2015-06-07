@@ -1,6 +1,7 @@
 Router.route '/',
   name: 'homepage'
-  controller: 'FrontEndController'
+  # controller: 'FrontEndController'
+  layoutTemplate: 'homepage_layout'
   template: 'home'
   subscriptions: ->
     Meteor.subscribe 'posts'

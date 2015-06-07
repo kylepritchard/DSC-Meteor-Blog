@@ -1,22 +1,30 @@
 // Blue Background
 @blue: rgb(32, 36, 46);
 @bg-blue: #ecf2f9;
+.bg-blue(@percent) {
+  background-color: darken(@bg-blue, percentage(@percent/100));
+};
 .blue(@percent) {
   color: lighten(@blue, percentage(@percent/100));
-}
+};
 
 // White Background
 @bg-white: #fff;
 .gray(@percent) {
   color: lighten(@gray, percentage(@percent/100));
-}
+};
 
 section {
-  padding: 20px;
+  padding: 30px 20px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10);
 
   &#main_content {
     padding: 0;
+    margin-top: 100px;
+
+    &.homepage {
+      margin-top: 0;
+    }
   }
 
   // Centered contents
@@ -35,6 +43,17 @@ section {
     }
   }
 
+  // Blue Section
+  &.bg-blue-dark {
+    .bg-blue(70);
+    // color: rgb(133, 144, 161);
+    .blue(100);
+
+    h1 {
+      .blue(100);
+    }
+  }
+
   // White Section
   &.bg-white {
     background-color: @bg-white;
@@ -43,6 +62,20 @@ section {
     h1 {
       .gray(0);
     }
+
+    a {
+      .gray(0);
+
+      &:hover {
+        .blue(50);
+      }
+    }
   }
 
+}
+
+//Icons
+
+i.header {
+  font-size: 40px;
 }

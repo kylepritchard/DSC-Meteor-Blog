@@ -3,7 +3,8 @@
   {{> carousel}}
 
   <section id="main_content">
-    {{>yield}}
+    {{> yield}}
   </section>
 
+  {{> footer}}
 </template>

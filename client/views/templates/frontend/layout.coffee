@@ -1,4 +1,4 @@
-Template.layout.rendered = ->
+Template.homepage_layout.rendered = ->
   $(window).scroll ->
     y_scroll_pos = window.pageYOffset
     scroll_pos_test = 150
@@ -13,3 +13,7 @@ Template.layout.rendered = ->
     navigation: false
     pagination: false
   return
+
+Template.layout.rendered = ->
+  $(window).unbind().scroll()
+  $('nav.navbar').addClass 'beyond-carousel'

@@ -1,17 +1,92 @@
-.news-item {
+// Headings
 
-  background: @white;
+i.heading {
+  font-size: 40px;
+  margin-right: 14px;
+  color: darken(@bg-blue, 25);
+}
+
+// Weather
+.weather {
+  background-color: rgba(32,106,170,.80);
+  border-radius: 5px;
+  color: @white;
+
+  h1 {
+    color: @white !important;
+  }
+}
+
+// News Items
+.homepage-news, .homepage-events {
+  position: relative;
+  z-index: 2;
+
+  &:before {
+    font-family: FontAwesome;
+    font-size: 20vw;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    z-index: -1;
+    color: @bg-blue;
+    opacity: 0.4;
+
+    @media ( max-width: @screen-md-min) {
+      display: none;
+    }
+  }
+}
+.homepage-news:before {
+  content: "\f1ea";
+}
+.homepage-events:before {
+  content: "\f073";
+}
+
+.news-item {
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 5px;
+  display: inline-block;
 
   &.news-featured {
     img {
       width: 100%;
     }
+
     @media (max-width: @screen-md-min) {
       margin-bottom: 15px;
     }
+
+    p {
+      margin: 0 0 8px;
+    }
+  }
+
+  div.info {
+    span {
+      display: inline;
+      float: left;
+      .bg-blue(0);
+      margin-right: 5px;
+      padding-right: 8px;
+      font-size: 11px;
+      .blue(30);
+    }
+
+    i {
+      .bg-blue(5);
+      padding: 5px;
+    }
+  }
+
+  h3, h4 {
+    .gray(0);
+  }
+
+  p {
+    margin: 0 0 2px;
   }
 
   img {
@@ -20,11 +95,80 @@
   }
 
   .right {
-    padding-left: 36%;
+    padding-left: 38%;
+
+    p i {
+      margin-right: 5px;
+    }
+
 
     h4 {
       margin:0;
     }
   }
+
+}
+
+// Events
+
+.event {
+
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .date {
+    width: 20%;
+    .gray(0);
+    text-align: center;
+    float:left;
+
+    .day {
+      font-size: 20px;
+      font-weight: 500;
+      display: block;
+    }
+
+    .month {
+      font-size: 16px;
+    }
+  }
+
+  .event-info {
+    // display: flex;
+    padding: 10px;
+    border-radius: 2px;
+    .blue(100);
+    background-color: @gray;
+    margin: 0 0 5px 20%;
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.social {
+      .bg-blue(20);
+    }
+    &.sailing {
+      background-color: @brand-success;
+    }
+    &.training {}
+
+    h4 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+  }
+}
+
+// Training
+
+.training {
 
 }

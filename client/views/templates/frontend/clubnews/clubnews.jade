@@ -1,0 +1,96 @@
+template(name="clubnews")
+  .container
+        .row
+          each main
+            .col-md-6
+              article.clubnews-item
+                header
+                .title
+                  h2 {{title}}
+                a.btn.pull-right.btn-floating-action.btn-info.readmore(href="/clubnews/{{_id}}")
+                  i.fa.fa-eye
+                footer
+                  .row
+                    .postdata.col-xs-4
+                      .postdate Posted: {{eventDate postdate }}
+                      .author By: {{author}}
+                    .socialmedia.col-xs-4.centered
+                      button.btn.btn-social-icon.btn-facebook 
+                        i.fa.fa-facebook
+                      button.btn.btn-social-icon.btn-twitter 
+                        i.fa.fa-twitter
+                      button.btn.btn-social-icon.btn-google
+                        i.fa.fa-google
+                .sharetotheworld
+                  h1 Share To the World!!!!
+                  button.btn.btn-social-icon.btn-facebook 
+                    i.fa.fa-facebook
+                  button.btn.btn-social-icon.btn-twitter 
+                    i.fa.fa-twitter
+                  button.btn.btn-social-icon.btn-google
+                    i.fa.fa-google    
+                          
+          each older
+            .col-md-4
+              article.clubnews-item
+                header
+                  span.title 
+                    h2 {{title}}
+                button.btn.pull-right.btn-floating-action.btn-info(href="#")
+                  i.fa.fa-eye
+                footer
+                  .postdate {{postdate}}
+                  .content {{{content}}}
+
+template(name='single_clubnews')
+  .clubnews-single-item
+    .container
+      article
+        header
+          img(src="/images/200.png")
+          .post-title
+            h1 {{title}}
+          | {{eventDate postdate}}
+          h1 {{title}}
+        content
+          .viewcounter
+            span#views 0
+            | Views
+          span.views.hidden {{views}}
+          | {{{content}}}
+          div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum facere, alias nisi iure labore eveniet asperiores quasi, inventore commodi magnam aspernatur, sunt cupiditate molestiae, repellat dolorum quas. Enim sapiente, dolore!
+          div Laboriosam illo deleniti nulla, maiores iure ex aut, provident molestiae vel doloremque asperiores maxime dolore, saepe sed pariatur reiciendis nobis culpa magni perspiciatis cum totam. Eius accusantium nesciunt voluptate maiores!
+          div Laboriosam doloremque autem sapiente perspiciatis nihil, aspernatur, adipisci quo? Veritatis, fugiat numquam neque odio repellat modi, voluptate aspernatur nulla nisi corrupti natus molestias, itaque, ducimus laudantium suscipit optio quidem expedita.
+          div Ut neque labore facilis consectetur eius est dolorum, sint, minima tempora molestiae ex placeat, cum voluptatum? Laudantium, corporis rerum deleniti nobis, suscipit nihil officia tempore expedita, fugiat, quisquam amet in.
+          div Ut alias, non similique dolorum et! Expedita illo dignissimos optio, vel ratione a sed enim itaque error dolorum, temporibus cum! Inventore consequatur explicabo repellendus reprehenderit cum, impedit dolor asperiores officia.
+          div Fugiat vitae sunt, iste. Voluptatibus consequuntur, laboriosam, ea perferendis cupiditate dicta delectus veritatis eaque incidunt omnis at ab, aperiam hic quia magnam odio repellat sint cum. Eos inventore, autem laudantium.
+          div Nesciunt totam ut praesentium, aut accusamus quibusdam debitis, porro magnam culpa dicta vitae libero nisi ipsa quasi omnis hic. Facere pariatur, sapiente placeat ut distinctio, eveniet odio est officia a?
+          div Vero quas non labore recusandae, facilis incidunt temporibus porro nobis deleniti omnis optio cupiditate fugit nemo dolor aut unde voluptatum nulla quam repudiandae corporis. Numquam adipisci quae non praesentium necessitatibus.
+          div Odio in laborum blanditiis fugiat labore ducimus beatae quaerat distinctio vero voluptatem explicabo quis, quo aspernatur cumque iusto libero dolorem vel incidunt sed, illum optio. Ipsum, magnam. Rem, nesciunt, laborum!
+          div Magnam, ipsa hic quam voluptates? Perspiciatis quod expedita ipsam quidem corporis dignissimos a voluptatum, quas cupiditate autem! Odit quod ad, blanditiis, quae perferendis, assumenda eius, quasi necessitatibus quisquam veniam ullam!
+          div Modi eius nobis impedit veritatis incidunt aspernatur corporis ea placeat itaque, soluta assumenda vero facere nesciunt sequi officia, excepturi ut debitis dolore nostrum suscipit aliquam omnis reiciendis. Nobis, porro, modi.
+          div Earum minima veniam odit ut facilis velit rerum voluptatum illum sed sint commodi cumque est delectus non tenetur modi quis obcaecati qui, nobis voluptatibus corrupti aperiam, doloremque! Aliquam, commodi, quaerat!
+          div Rem cupiditate provident explicabo, dolore enim labore consequatur, repudiandae, nihil cum velit blanditiis voluptates dignissimos natus eius dicta iusto ullam. Inventore iure in sequi accusamus ipsa voluptatem dolores quaerat, esse.
+          div Velit doloribus, fuga rerum? Nulla sit, est mollitia architecto tenetur doloribus quaerat sed rem iusto debitis. Consectetur delectus ipsa culpa suscipit, nemo quos dolorum aut, et beatae, minima dolore voluptates.
+          div Tenetur veritatis laboriosam earum amet minima ipsam aut laudantium molestiae. Repudiandae rerum provident, incidunt minima consectetur magnam totam ea a aut, enim, quibusdam modi ipsa explicabo unde voluptates ad aperiam.
+          div Corrupti culpa facilis fugit molestias, dolorum, ex rerum animi eveniet voluptates a dolorem. Iusto ipsam voluptatem deleniti facere amet nobis culpa sit eveniet, voluptatibus nemo, qui placeat iure cupiditate fugit.
+          div Voluptatem tempore harum ratione repellendus, officiis iusto asperiores eligendi illum perferendis similique. Et non, quas ipsam omnis delectus maiores magni dicta sint sunt id, fugit nesciunt a molestias suscipit facere.
+          div Magnam cum a error cupiditate excepturi molestias facilis quisquam, labore accusamus ratione vitae fugiat eum totam rem dolores consequatur nam commodi possimus. Natus accusantium fugiat deleniti necessitatibus repudiandae dolorem exercitationem.
+          div Fuga natus expedita illo mollitia adipisci unde aspernatur quod commodi, vel! Magni adipisci veniam voluptas totam maiores deleniti doloremque, quasi, praesentium perspiciatis obcaecati repellendus natus explicabo minima ea fugiat animi!
+          div Nisi placeat dolores quas, voluptatum, necessitatibus nobis iure dignissimos laborum nostrum odio molestias doloribus possimus soluta explicabo impedit aspernatur libero eaque harum quos cum laudantium officiis. Alias mollitia aspernatur, inventore!
+    //- img(src="/images/200.png" id="backdrop")
+    //- img(id='hello' src='#')
+    
+  
+  script(type="text/javascript").
+    $(window).ready(function(){
+      var views = $('span.views').text();
+      //- views = parseInt(views);
+      console.log(views);
+      $('#views').animateNumber({ 
+        number: views,
+        easing: 'easeInQuad'
+      }, 5000);
+      console.log('done');
+    });
+    

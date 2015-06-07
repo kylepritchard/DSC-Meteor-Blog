@@ -1,0 +1,138 @@
+<template name="home">
+  <!-- Info & Weather -->
+  <section class="bg-blue centered">
+    <div class="container">
+      <div class="row">
+        <!-- About Intro -->
+        <div class="col-md-8">
+          <h1>info</h1>
+          <p>
+            <strong>Donaghadee Sailing Club brings fun sailing opportunities for all ages in a safe, family friendly environment. Situated on Donaghadee's famous seafront with views of the iconic lighthouse and the Copeland Islands, our beautiful Clubhouse is
+              the base for all of our sailing, racing, training and social activities.
+            </strong>
+          </p>
+          <p>
+            We offer a wide range of training courses for juniors and adults, catering for all levels of experience. All of our courses are accredited by the Royal Yachting Association and led by our RYA Principal.</p>
+          <p>We offer Club Racing on Wednesday evenings and Sunday afternoons throughout the summer. Sunday afternoon racing continues throughout the year for the more adventurous helms and crew. During the summer, our extremely popular Friday Club Nights
+            for Juniors allow young people to get onto the water to enjoy sailing for the first time with an experienced helm.</p>
+          <p>As a Club we place a strong emphasis on families, with a wide range of social events offered during the year including picnics, trips to the Copeland Islands as well as children's parties. With over 300 members our Club is growing from strength
+            to strength so please come down and see for yourself what Donaghadee Sailing Club has to offer.</p>
+        </div>
+        <!-- Weather -->
+        <div class="col-md-4">
+          <div class="weather">
+            <h1>Weather</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- News & Events -->
+  <section class="bg-white centered">
+    <div class="container">
+      <!-- Club News -->
+      <div class="col-md-8 homepage-news">
+        <div class="row">
+          <h1>
+            <i class="fa fa-newspaper-o heading"></i>Club News</h1>
+          <!-- Featured News -->
+          <div class="col-md-6">
+            {{#each featuredPost}}
+            <div class="news-item news-featured">
+              <img src="images/200.png" />
+              <h3>{{title}}</h3>
+              <p>This is some text put here just to illustrate a sample of text...</p>
+              <div class="info">
+                <span>
+                  <i class="fa fa-clock-o"></i> {{eventDate postdate}}
+                </span>
+                <span>
+                  <i class="fa fa-user"></i> {{author}}
+                </span>
+                <span>
+                  <i class="fa fa-comment-o"></i> 0
+                </span>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              {{#each posts}}
+              <div class="col-xs-12">
+                <div class="news-item">
+                  <img class="pull-left" src="images/200.png" />
+                  <div class="right" style="text-align: left">
+                    <h4><a href="#">{{title}}</a></h4>
+                    <p>Comments Author and shit</p>
+                    <div class="info">
+                      <span>
+                        <i class="fa fa-clock-o"></i> {{eventDate postdate}}
+                      </span>
+                      <span>
+                        <i class="fa fa-comment-o"></i> 0
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+              <div class="col-xs-12">
+                <div class="news-item">
+                  <button class="btn btn-xl">Read more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Events -->
+      <div class="col-md-4 homepage-events">
+        <div class="row">
+          <h1>
+            <i class="fa fa-calendar heading"></i>Events</h1>
+          <div class="col-xs-12">
+            <p>event</p>
+          </div>
+          <div class="col-xs-12">
+            <p>event</p>
+          </div>
+          <div class="col-xs-12">
+            <p>event</p>
+          </div>
+          <div class="col-xs-12">
+            <p>event</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sub Sections -->
+  <section class="bg-blue-dark centered">
+    <div class="container">
+      <div class="row">
+        <!-- Training -->
+        <div class="col-md-4 training">
+          <!-- <i class="fa fa-university header"></i> -->
+          <h1><i class="fa fa-university header"></i> Training</h1>
+          <p>At Donaghadee Sailing Club we run a variety of courses throughout the year offering RYA qualifications in sailing, powerboating and asssociated.... The club offers excellent training facilities catering for a wide range of needs.</p>
+          <button class="btn white-outline">See More Training</button>
+        </div>
+        <!-- Junior Sailing -->
+        <div class="col-md-4 junior">
+          <!-- <i class="fa fa-university header"></i> -->
+          <h1><i class="fa fa-university header"></i> Junior Sailing</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem, nobis nostrum? Blanditiis aperiam illum minima natus et ut ullam, perferendis a, accusamus, aspernatur non explicabo dicta sed. Temporibus, tempora.</p>
+          <button class="btn white-outline">Junior Section</button>
+        </div>
+        <!-- Something Else -->
+        <div class="col-md-4">
+
+          <h1><i class="fa fa-university header"></i> Other Shite</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto fugit inventore tenetur quas ea repudiandae reprehenderit atque excepturi odio laboriosam quasi, eaque quisquam debitis commodi tempore suscipit dicta quaerat repellendus.</p>
+          <button class="btn white-outline">Some other shite</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

@@ -1,0 +1,145 @@
+template(name='home')
+  // Info & Weather
+  section.bg-blue.centered
+    .container
+      .row
+        // About Intro
+        .col-md-8
+          h1 info
+          p
+            strong
+              | Donaghadee Sailing Club brings fun sailing opportunities for all ages in a safe, family friendly environment. Situated on Donaghadee&apos;s famous seafront with views of the iconic lighthouse and the Copeland Islands, our beautiful Clubhouse is
+              | the base for all of our sailing, racing, training and social activities.
+          p
+            | We offer a wide range of training courses for juniors and adults, catering for all levels of experience. All of our courses are accredited by the Royal Yachting Association and led by our RYA Principal.
+          p
+            | We offer Club Racing on Wednesday evenings and Sunday afternoons throughout the summer. Sunday afternoon racing continues throughout the year for the more adventurous helms and crew. During the summer, our extremely popular Friday Club Nights
+            | for Juniors allow young people to get onto the water to enjoy sailing for the first time with an experienced helm.
+          p
+            | As a Club we place a strong emphasis on families, with a wide range of social events offered during the year including picnics, trips to the Copeland Islands as well as children&apos;s parties. With over 300 members our Club is growing from strength
+            | to strength so please come down and see for yourself what Donaghadee Sailing Club has to offer.
+        // Weather
+        .col-md-4
+          .weather
+            h1 Weather
+  // News & Events
+  section.bg-white.centered
+    .container
+      // Club News
+      .col-md-8.homepage-news
+        .row
+          h1
+            i.fa.fa-newspaper-o.heading
+            | Club News
+          // Featured News
+          .col-md-6
+            each featuredPost
+              .news-item.news-featured
+                img(src='images/200.png')
+                h3 {{title}}
+                p This is some text put here just to illustrate a sample of text...
+                .info
+                  span
+                    i.fa.fa-clock-o
+                    | {{eventDate postdate}}
+                  span
+                    i.fa.fa-user
+                    | {{author}}
+                  span
+                    i.fa.fa-comment-o
+                    |  0
+          .col-md-6
+            .row
+              each posts
+                .col-xs-12
+                  .news-item
+                    img.pull-left(src='images/200.png')
+                    .right(style='text-align: left')
+                      h4
+                        a(href='#') {{title}}
+                      p Comments Author and shit
+                      .info
+                        span
+                          i.fa.fa-clock-o
+                          | {{eventDate postdate}}
+                        span
+                          i.fa.fa-comment-o
+                          | 0
+              .col-xs-12
+                .news-item
+                  button.btn.btn-xl.blue-outline Read more
+  
+      // Events
+      .col-md-4.homepage-events
+        .row
+          h1
+            i.fa.fa-calendar.heading
+            | Events
+          //- each events
+          //-   .col-xs-12.event
+          //-     .date
+          //-       span.day 21
+          //-       span.month Jul
+          //-     .event-info.social
+          //-       h4 
+          //-         i.fa.fa-newspaper-o 
+          //-         | Title
+          //-       p 1000 - 1200, Clubhouse
+          .col-xs-12.event
+            .date
+              span.day 21
+              span.month Jul
+            .event-info.social
+              h4 
+                i.fa.fa-newspaper-o 
+                | Title
+              p 1000 - 1200, Clubhouse
+            .event-info.sailing
+              h4 Title
+          .col-xs-12.event
+            .date
+              span.day 21
+              span.month Jul
+            .event-info.social
+              h4 
+                i.fa.fa-newspaper-o 
+                | Title
+              p 1000 - 1200, Clubhouse
+            .event-info.sailing
+              h4 Title
+              
+  // Sub Sections
+  section.bg-blue-dark.centered
+    .container
+      .row
+        // Training
+        .col-md-4.training
+          h1
+            i.fa.fa-university.header
+            | Training
+          p
+            | At Donaghadee Sailing Club we run a variety of courses throughout the year offering RYA qualifications in sailing, powerboating and asssociated.... The club offers excellent training facilities catering for a wide range of needs.
+          button.btn.white-outline See More
+        
+        // Junior Sailing
+        .col-md-4.junior
+          h1
+            i.fa.fa-university.header
+            | Junior Sailing
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatem, nobis nostrum? Blanditiis aperiam illum minima natus et ut ullam, perferendis a, accusamus, aspernatur non explicabo dicta sed. Temporibus, tempora.
+          button.btn.white-outline See More
+        
+        // Something Else
+        .col-md-4
+          h1
+            i.fa.fa-university.header
+            | Other Shite
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto fugit inventore tenetur quas ea repudiandae reprehenderit atque excepturi odio laboriosam quasi, eaque quisquam debitis commodi tempore suscipit dicta quaerat repellendus.
+          button.btn.white-outline See More
+  
+  // Sub Sections
+  section.bg-blue.centered
+    .container
+      .row

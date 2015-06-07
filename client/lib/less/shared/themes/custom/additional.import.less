@@ -12,6 +12,7 @@
 @import 'carousel.import.less';
 @import 'sections.import.less';
 @import 'homepage.import.less';
+@import 'clubnews.import.less';
 
 //Font weight
 body {
@@ -130,5 +131,29 @@ div.headerbar-right {
         }
       }
     }
+  }
+}
+
+button.white-outline {
+  border: 1px solid @white;
+  border-radius: 5px;
+  color: @white;
+  width: 75%;
+  background-color: transparent;
+}
+
+button.blue-outline {
+  color: darken(@bg-blue, 25);
+  border: 1px solid darken(@bg-blue, 25);
+  border-radius: 5px;
+  width: 300px;
+  background-color: transparent;
+
+  &:hover {
+    color: darken(@bg-blue, 50);
+  }
+
+  &:focus {
+    color: darken(@bg-blue, 25);
   }
 }
